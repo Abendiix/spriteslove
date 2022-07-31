@@ -11,11 +11,12 @@ html {
   text-shadow: 2px 2px black;
 }
 
-select, button {
+select, button, a, a:hover {
   border: 10px solid transparent;
   background: rgb(0,0,0,0);
   color: white;
   text-shadow: 2px 2px black;
+  text-decoration: none;
 }
 
 .active {
