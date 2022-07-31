@@ -390,7 +390,7 @@ function dx()
 
 function download(){
     var image = canvas.toDataURL();  
-    image.setAttribute('crossOrigin', 'anonymous');
+    image.crossOrigin = "anonymous";  // This enables CORS
     var tmpLink = document.createElement('a');  
     tmpLink.download = 'image.png';
     tmpLink.href = image;  
