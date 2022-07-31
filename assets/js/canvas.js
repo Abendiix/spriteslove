@@ -20,6 +20,7 @@ var control;
 var controlchange;
 
 var folder;
+var button = document.getElementById("download");
 
 window.onload = onLoad();
 
@@ -40,15 +41,14 @@ function onLoad()
     control.style.display = "none";
     controladd.style.display = "none";
     controlchange.style.display = "none";
-    controlremove.style.display = "none";
     
-    folder = "https://raw.githubusercontent.com/Abendiix/spriteslove/main/assets/img/images/"
+    folder = "./images/";
 }
 
 function fn() {
     
     img = document.getElementById('pokeimg');
-    canvas = document.getElementById("myCanvas");
+    canvas = document.getElementById("canvas");
     ctx = canvas.getContext("2d");
     pokemon = document.getElementById("pokemon").value;
     emotion = document.getElementById("emotion").value;
@@ -61,21 +61,20 @@ function fn() {
     ctx.scale(size*flip, size);
 
     console.log(img.src)
+    predown();
 }
 
 function draw()
 {
     ctx.drawImage(img, flip*width/2-(img.width/2), height/2-(img.height/2), img.width, img.height);
-    
-    if(controlremove.style.display == "flex")
-        {
-            ctx.drawImage(borderimg, flip*width/2-(borderimg.width/2), height/2-(borderimg.height/2), borderimg.width, borderimg.height);
-        }
+    ctx.drawImage(borderimg, flip*width/2-(borderimg.width/2), height/2-(borderimg.height/2), borderimg.width, borderimg.height);
+    predown();
 }
 
 function plain_draw()
 {
     ctx.drawImage(img, flip*width/2-(img.width/2), height/2-(img.height/2), img.width, img.height);
+    predown();
 }
 
 function add()
@@ -101,25 +100,17 @@ function add()
             nswitchrow.style.display = "flex";
             control.style.display = "none";
         }
-}
-
-function remove()
-{
-    fn();
-    ctx.drawImage(img, flip*width/2-(img.width/2), height/2-(img.height/2), img.width, img.height);
-    controladd.style.display = "flex";
-    controlchange.style.display = "none";
-    controlremove.style.display = "none";
+        predown();
 }
 
 function plain_wait()
 {
-    setTimeout(function() {plain_draw();}, 50);
+    setTimeout(function() {plain_draw();predown();}, 50);
 }
 
 function wait()
 {
-    setTimeout(function() {draw();}, 50);
+    setTimeout(function() {draw();predown();}, 50);
 }
 
 function cargar(carga)
@@ -156,8 +147,8 @@ function nds()
     graph = "nds";
     fn();
     check_emotion();
-    remove();
     wait();
+    predown();
 }
 
 function n3ds()
@@ -171,8 +162,8 @@ function n3ds()
     graph = "n3ds";
     fn();
     check_emotion();
-    remove();
     wait();
+    predown();
 }
 
 function nswitch()
@@ -186,8 +177,8 @@ function nswitch()
     graph = "nswitch";
     fn();
     check_emotion();
-    remove();
     wait();
+    predown();
 }
 
 function reselect()
@@ -198,7 +189,6 @@ function reselect()
             control.style.display = "flex";
             controladd.style.display = "flex";
             controlchange.style.display = "none";
-            controlremove.style.display = "none";
             width = 48;
             height = 48;
         }
@@ -208,7 +198,6 @@ function reselect()
             control.style.display = "flex";
             controladd.style.display = "flex";
             controlchange.style.display = "none";
-            controlremove.style.display = "none";
             width = 64;
             height = 64;
         }
@@ -218,11 +207,11 @@ function reselect()
             control.style.display = "flex";
             controladd.style.display = "flex";
             controlchange.style.display = "none";
-            controlremove.style.display = "none";
             width = 170;
             height = 170;
         }
     fn();
+    predown();
 }
 
 function flipped()
@@ -230,172 +219,183 @@ function flipped()
     flip = flip * -1;
     fn();
     wait();
+    predown();
+}
+
+function predown()
+{
+    var image = canvas.toDataURL();  
+    image.crossOrigin = "anonymous";  // This enables CORS
+    var tmpLink = document.createElement('a');  
+    tmpLink.download = 'image.png';
+    button.href = canvas.toDataURL();
 }
 
 function blue_blue()
 {
     borderimg = document.getElementById('blue_blue');
-    borderimg.src = "https://raw.githubusercontent.com/Abendiix/spriteslove/main/assets/img/borders/blue_blue.png";
+    borderimg.src = "./borders/blue_blue.png";
     ndsrow.style.display = "none";
     control.style.display = "flex";
     controladd.style.display = "none";
     controlchange.style.display = "flex";
-    controlremove.style.display = "flex";
     fn();
     draw();
+    predown();
 }
 
 function blue_pink()
 {
     borderimg = document.getElementById('blue_pink');
-    borderimg.src = "https://raw.githubusercontent.com/Abendiix/spriteslove/main/assets/img/borders/blue_pink.png";
+    borderimg.src = "./borders/blue_pink.png";
     ndsrow.style.display = "none";
     control.style.display = "flex";
     controladd.style.display = "none";
     controlchange.style.display = "flex";
-    controlremove.style.display = "flex";
     fn();
     draw();
+    predown();
 }
 
 function blue_green()
 {
     borderimg = document.getElementById('blue_green');
-    borderimg.src = "https://raw.githubusercontent.com/Abendiix/spriteslove/main/assets/img/borders/blue_green.png";
+    borderimg.src = "./borders/blue_green.png";
     ndsrow.style.display = "none";
     control.style.display = "flex";
     controladd.style.display = "none";
     controlchange.style.display = "flex";
-    controlremove.style.display = "flex";
     fn();
     draw();
+    predown();
 }
 
 function dt_blue()
 {
     borderimg = document.getElementById('dt_blue');
-    borderimg.src = "https://raw.githubusercontent.com/Abendiix/spriteslove/main/assets/img/borders/dt_blue.png";
+    borderimg.src = "./borders/dt_blue.png";
     ndsrow.style.display = "none";
     control.style.display = "flex";
     controladd.style.display = "none";
     controlchange.style.display = "flex";
-    controlremove.style.display = "flex";
     fn();
     draw();
+    predown();
 }
 
 function dt_pink()
 {
     borderimg = document.getElementById('dt_pink');
-    borderimg.src = "https://raw.githubusercontent.com/Abendiix/spriteslove/main/assets/img/borders/dt_pink.png";
+    borderimg.src = "./borders/dt_pink.png";
     ndsrow.style.display = "none";
     control.style.display = "flex";
     controladd.style.display = "none";
     controlchange.style.display = "flex";
-    controlremove.style.display = "flex";
     fn();
     draw();
+    predown();
 }
 
 function dt_green()
 {
     borderimg = document.getElementById('dt_green');
-    borderimg.src = "https://raw.githubusercontent.com/Abendiix/spriteslove/main/assets/img/borders/dt_green.png";
+    borderimg.src = "./borders/dt_green.png";
     ndsrow.style.display = "none";
     control.style.display = "flex";
     controladd.style.display = "none";
     controlchange.style.display = "flex";
-    controlremove.style.display = "flex";
     fn();
     draw();
+    predown();
 }
 
 function sky_blue()
 {
     borderimg = document.getElementById('sky_blue');
-    borderimg.src = "https://raw.githubusercontent.com/Abendiix/spriteslove/main/assets/img/borders/sky_blue.png";
+    borderimg.src = "./borders/sky_blue.png";
     ndsrow.style.display = "none";
     control.style.display = "flex";
     controladd.style.display = "none";
     controlchange.style.display = "flex";
-    controlremove.style.display = "flex";
     fn();
     draw();
+    predown();
 }
 
 function sky_pink()
 {
     borderimg = document.getElementById('sky_pink');
-    borderimg.src = "https://raw.githubusercontent.com/Abendiix/spriteslove/main/assets/img/borders/sky_pink.png";
+    borderimg.src = "./borders/sky_pink.png";
     ndsrow.style.display = "none";
     control.style.display = "flex";
     controladd.style.display = "none";
     controlchange.style.display = "flex";
-    controlremove.style.display = "flex";
     fn();
     draw();
+    predown();
 }
 
 function sky_green()
 {
     borderimg = document.getElementById('sky_green');
-    borderimg.src = "https://raw.githubusercontent.com/Abendiix/spriteslove/main/assets/img/borders/sky_green.png";
+    borderimg.src = "./borders/sky_green.png";
     ndsrow.style.display = "none";
     control.style.display = "flex";
     controladd.style.display = "none";
     controlchange.style.display = "flex";
-    controlremove.style.display = "flex";
     fn();
     draw();
+    predown();
 }
 
 function mega()
 {
     borderimg = document.getElementById('mega');
-    borderimg.src = "https://raw.githubusercontent.com/Abendiix/spriteslove/main/assets/img/borders/mega.png";
+    borderimg.src = "./borders/mega.png";
     n3dsrow.style.display = "none";
     control.style.display = "flex";
     controladd.style.display = "none";
     controlchange.style.display = "flex";
-    controlremove.style.display = "flex";
     fn();
     draw();
+    predown();
 }
 
 function gates()
 {
     borderimg = document.getElementById('gates');
-    borderimg.src = "https://raw.githubusercontent.com/Abendiix/spriteslove/main/assets/img/borders/gates.png";
+    borderimg.src = "./borders/gates.png";
     n3dsrow.style.display = "none";
     control.style.display = "flex";
     controladd.style.display = "none";
     controlchange.style.display = "flex";
-    controlremove.style.display = "flex";
     fn();
     draw();
+    predown();
 }
 
 function dx()
 {
     borderimg = document.getElementById('dx');
-    borderimg.src = "https://raw.githubusercontent.com/Abendiix/spriteslove/main/assets/img/borders/dx.png";
+    borderimg.src = "./borders/dx.png";
     nswitchrow.style.display = "none";
     control.style.display = "flex";
     controladd.style.display = "none";
     controlchange.style.display = "flex";
-    controlremove.style.display = "flex";
     fn();
     draw();
+    predown();
 }
 
-function download(){
-    var image = canvas.toDataURL();  
-    image.crossOrigin = "anonymous";  // This enables CORS
-    var tmpLink = document.createElement('a');  
-    tmpLink.download = 'image.png';
-    tmpLink.href = image;  
-  
-    document.body.appendChild(tmpLink);  
-    tmpLink.click();  
-    document.body.removeChild(tmpLink);  
-}
+var canvas = document.getElementById("canvas").getContext("2d");
+
+var button = document.getElementById("download");
+
+var image = new Image();
+image.crossOrigin = "anonymous";  // This enables CORS
+image.onload = function (event) {
+    fn();
+        button.download = pokemon + "_" + emotion + ".png";
+        button.href = canvas.canvas.toDataURL();        
+};
+image.src = "https://raw.githubusercontent.com/Abendiix/spriteslove/main/assets/img/images/nds/1_1.png";
