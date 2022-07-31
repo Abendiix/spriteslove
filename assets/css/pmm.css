@@ -1,8 +1,0 @@
-@font-face {
-	font-family: 'pmm';
-	src: url(../../assets/fonts/pmm.woff2) format('woff2'),
-	url(../../assets/fonts/pmm.woff) format('woff');
-	font-weight: 500;
-	font-style: normal;
-	font-display: swap;
-}
