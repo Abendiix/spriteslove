@@ -396,6 +396,6 @@ image.crossOrigin = "anonymous";  // This enables CORS
 image.onload = function (event) {
     fn();
         button.download = pokemon + "_" + emotion + ".png";
-        button.href = canvas.canvas.toDataURL();        
+        button.href = canvas.toDataURL();        
 };
 image.src = "https://raw.githubusercontent.com/Abendiix/spriteslove/main/assets/img/images/nds/1_1.png";
