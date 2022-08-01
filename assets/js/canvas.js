@@ -42,7 +42,7 @@ function onLoad()
     controlchange.style.display = "none";
     controlremove.style.display = "none";
     
-    folder = "./images/";
+    folder = "https://raw.githubusercontent.com/Abendiix/spriteslove/main/assets/img/images/";
 }
 
 function fn() {
