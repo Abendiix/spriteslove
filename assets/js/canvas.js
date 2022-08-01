@@ -55,6 +55,8 @@ function fn() {
     pokemon = document.getElementById("pokemon").value;
     emotion = document.getElementById("emotion").value;
     
+    console.log(folder);
+    
     img.src = palabra;
     
     canvas.width = width*size;
