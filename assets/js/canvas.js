@@ -42,19 +42,17 @@ function onLoad()
     controlchange.style.display = "none";
     controlremove.style.display = "none";
     
-    folder = "https://raw.githubusercontent.com/Abendiix/spriteslove/main/assets/img/images/";
+    folder = "./images/";
 }
 
 function fn() {
     
-    img = document.getElementById('pokeimg');
+    img = document.getElementById('bulba');
     canvas = document.getElementById("myCanvas");
     ctx = canvas.getContext("2d");
     pokemon = document.getElementById("pokemon").value;
     emotion = document.getElementById("emotion").value;
-    
-    img.src = folder + graph + "/" + pokemon + "_" + emotion + ".png";
-    
+        
     canvas.width = width*size;
     canvas.height = height*size;
     ctx.imageSmoothingEnabled = false;
