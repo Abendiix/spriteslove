@@ -44,7 +44,7 @@ function onLoad()
     controlchange.style.display = "none";
     controlremove.style.display = "none";
     
-    folder = "./images/";
+    folder = "https://raw.githubusercontent.com/Abendiix/spriteslove/main/assets/img/images/";
 }
 
 function fn() {
@@ -243,7 +243,7 @@ function flipped()
 function blue_blue()
 {
     borderimg = document.getElementById('blue_blue');
-    borderimg.src = "./borders/blue_blue.png";
+    borderimg.src = "https://raw.githubusercontent.com/Abendiix/spriteslove/main/assets/img/borders/blue_blue.png";
     ndsrow.style.display = "none";
     control.style.display = "flex";
     controladd.style.display = "none";
@@ -256,7 +256,7 @@ function blue_blue()
 function blue_pink()
 {
     borderimg = document.getElementById('blue_pink');
-    borderimg.src = "./borders/blue_pink.png";
+    borderimg.src = "https://raw.githubusercontent.com/Abendiix/spriteslove/main/assets/img/borders/blue_pink.png";
     ndsrow.style.display = "none";
     control.style.display = "flex";
     controladd.style.display = "none";
@@ -269,7 +269,7 @@ function blue_pink()
 function blue_green()
 {
     borderimg = document.getElementById('blue_green');
-    borderimg.src = "./borders/blue_green.png";
+    borderimg.src = "https://raw.githubusercontent.com/Abendiix/spriteslove/main/assets/img/borders/blue_green.png";
     ndsrow.style.display = "none";
     control.style.display = "flex";
     controladd.style.display = "none";
@@ -282,7 +282,7 @@ function blue_green()
 function dt_blue()
 {
     borderimg = document.getElementById('dt_blue');
-    borderimg.src = "./borders/dt_blue.png";
+    borderimg.src = "https://raw.githubusercontent.com/Abendiix/spriteslove/main/assets/img/borders/dt_blue.png";
     ndsrow.style.display = "none";
     control.style.display = "flex";
     controladd.style.display = "none";
@@ -295,7 +295,7 @@ function dt_blue()
 function dt_pink()
 {
     borderimg = document.getElementById('dt_pink');
-    borderimg.src = "./borders/dt_pink.png";
+    borderimg.src = "https://raw.githubusercontent.com/Abendiix/spriteslove/main/assets/img/borders/dt_pink.png";
     ndsrow.style.display = "none";
     control.style.display = "flex";
     controladd.style.display = "none";
@@ -308,7 +308,7 @@ function dt_pink()
 function dt_green()
 {
     borderimg = document.getElementById('dt_green');
-    borderimg.src = "./borders/dt_green.png";
+    borderimg.src = "https://raw.githubusercontent.com/Abendiix/spriteslove/main/assets/img/borders/dt_green.png";
     ndsrow.style.display = "none";
     control.style.display = "flex";
     controladd.style.display = "none";
@@ -321,7 +321,7 @@ function dt_green()
 function sky_blue()
 {
     borderimg = document.getElementById('sky_blue');
-    borderimg.src = "./borders/sky_blue.png";
+    borderimg.src = "https://raw.githubusercontent.com/Abendiix/spriteslove/main/assets/img/borders/sky_blue.png";
     ndsrow.style.display = "none";
     control.style.display = "flex";
     controladd.style.display = "none";
@@ -334,7 +334,7 @@ function sky_blue()
 function sky_pink()
 {
     borderimg = document.getElementById('sky_pink');
-    borderimg.src = "./borders/sky_pink.png";
+    borderimg.src = "https://raw.githubusercontent.com/Abendiix/spriteslove/main/assets/img/borders/sky_pink.png";
     ndsrow.style.display = "none";
     control.style.display = "flex";
     controladd.style.display = "none";
@@ -347,7 +347,7 @@ function sky_pink()
 function sky_green()
 {
     borderimg = document.getElementById('sky_green');
-    borderimg.src = "./borders/sky_green.png";
+    borderimg.src = "https://raw.githubusercontent.com/Abendiix/spriteslove/main/assets/img/borders/sky_green.png";
     ndsrow.style.display = "none";
     control.style.display = "flex";
     controladd.style.display = "none";
@@ -360,7 +360,7 @@ function sky_green()
 function mega()
 {
     borderimg = document.getElementById('mega');
-    borderimg.src = "./borders/mega.png";
+    borderimg.src = "https://raw.githubusercontent.com/Abendiix/spriteslove/main/assets/img/borders/mega.png";
     n3dsrow.style.display = "none";
     control.style.display = "flex";
     controladd.style.display = "none";
@@ -373,7 +373,7 @@ function mega()
 function gates()
 {
     borderimg = document.getElementById('gates');
-    borderimg.src = "./borders/gates.png";
+    borderimg.src = "https://raw.githubusercontent.com/Abendiix/spriteslove/main/assets/img/borders/gates.png";
     n3dsrow.style.display = "none";
     control.style.display = "flex";
     controladd.style.display = "none";
@@ -386,7 +386,7 @@ function gates()
 function dx()
 {
     borderimg = document.getElementById('dx');
-    borderimg.src = "./borders/dx.png";
+    borderimg.src = "https://raw.githubusercontent.com/Abendiix/spriteslove/main/assets/img/borders/dx.png";
     nswitchrow.style.display = "none";
     control.style.display = "flex";
     controladd.style.display = "none";
