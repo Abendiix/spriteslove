@@ -1,0 +1,14 @@
+#settings {
+  position: relative;
+  display: inline-block;
+}
+
+.setting {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%);
+  cursor: url("../../assets/img/cursor/cursor_pointer.svg") 5 5, pointer !important;
+  text-align: center;
+}
+

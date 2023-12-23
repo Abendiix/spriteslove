@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" id="holder" class="holder_default" lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>10-10-23</title>
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/spriteslovefont.css">
+        <link rel="stylesheet" href="assets/css/animate.min.css">
+        <link rel="stylesheet" href="assets/css/settings.css">
+        <link rel="stylesheet" href="assets/css/styles.css">
+    </head>
+
+    <body style="background: rgb(245,245,245);font-family: spriteslovefont; font-size: 26px">
+        
+        <!--Navbar-->
+        <div class="col d-md-flex d-xl-flex d-xxl-flex justify-content-center" style="background: rgb(250,0,40)">
+            <nav class="navbar navbar-expand-md" style="background-color: transparent !important">
+                <div class="container">
+
+                    <!--Sprites Love's logo-->
+                    <a class="navbar-brand d-flex align-items-center">
+                        <img class="shadow-lg rubberBand animated" src="assets/img/logo_spriteslove.svg" style="width: 50px; border-radius: 5px">
+                    </a>
+                    <!--Sprites Love's logo-->
+
+                    <!--Navbar collapse-->
+                    <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-5">
+                        <span class="visually-hidden">Toggle navigation</span>
+                        <img src="assets/img/icons/dropdown.svg" style="width: 30px">
+                    </button>
+                    <!--Navbar collapse-->
+                    
+                    <!--Collapse -->
+                    <div class="collapse navbar-collapse text-center" id="navcol-5">
+                        
+                        <!--Navbar items-->
+                        <ul class="navbar-nav ms-auto">
+
+                            <!--Home-->
+                            <li class="nav-item">
+                                <a class="nav-link active" href="https://spriteslove.com/" style="color: rgb(255,255,255); font-size: 32px">Home #</a>
+                            </li>
+                            <!--Home-->
+
+                            <!--Tips-->
+                            <li class="nav-item">
+                                <a class="nav-link" style="color: rgb(255,255,255); font-size: 32px" href="https://ko-fi.com/abendiix" target="_blank">Tips $</a>
+                            </li>
+                            <!--Tips-->
+
+                            <!--Languages-->
+                            <li class="nav-item">
+                                <div class="nav-item dropdown" style="padding: 8px; font-size: 32px">
+                                    <a class="dropdown-toggle languages" aria-expanded="false" data-bs-toggle="dropdown" href="#" style="color: rgb(255,255,255); appearance: none">Languages %</a>
+                                    <div class="dropdown-menu text-center" style="font-size: 24px">
+                                        <a class="dropdown-item" href="#">English</a>
+                                        <a class="dropdown-item" href="#">Español</a>
+                                        <a class="dropdown-item" href="#">日本語</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <!--Languages-->
+
+                        </ul>
+                        <!--Navbar items-->
+
+                    </div>
+                    <!--Collapse-->
+
+                </div>
+            </nav>
+        </div>
+        <!--Navbar-->
+
+        <!--Tool's section-->
+        <div class="text-center pre-image">
+            <div class="container">
+                <h1>Create a wallpaper with any sprite</h1>
+                <h3 style="color: rgb(75,75,75)">Use your favorite sprite to create a wallpaper!</h3>
+                
+                <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.js"></script>
+    
+                <input type="file" id="imageLoader" name="imageLoader" style="display: none" class="button"/>
+                <button value="Select Sprite" onclick="document.getElementById('imageLoader').click();" style="margin-top: 10px; margin-bottom: 10px">Select sprite</button>
+                <img src="" id="image_droped" style="display: none"/>
+                <p>or<br>Drop it anywhere!</p>
+            </div>
+        </div>
+        <!--Tool's section-->
+
+        <!--Tool-->
+        <div class="post-image">
+            <h1 id="background" style="text-align: center;">Background preview</h1>
+            
+            <div class="row justify-content-center" style="margin: 12px">
+                <div class="col" style="display: block !important; min-width: 50%; max-width: 50%">
+                    <div class="text-center post-image"><!--https://www.sololearn.com/Discuss/1611914/html-element-on-top-of-canvas-->
+                        
+                        <!--Settings' section-->
+                        <div id="settings">
+    
+                            <canvas style="width: 100%; height:100%; margin-top: 10px" id="imageCanvas" class="shadow">
+                            </canvas>
+        
+                            <!--Size Multiplier-->
+                            <input class="setting" id="spriteSizer" type="number" value="1" style="width: 2em; display: none" onchange="changeSpriteMultiplier()">
+                            <!--Size Multiplier-->
+
+                            <!--Coordinates-->
+                            <input class="setting" type="number" id="XPosition" style="left: 40%; width: 4em; display: none" placeholder="X" onchange="changeXPosition()">
+                            <input class="setting" type="number" id="YPosition" style="left: 60%; width: 4em; display: none" placeholder="Y" onchange="changeYPosition()">
+                            <!--Coordinates-->
+        
+                            <!--Shadows-->
+                            <select autocomplete="off" class="setting" id="shadow" style="display: none;" onchange="changeShadow()">
+                                <option value="0" selected>None</option>
+                                <option value="1">Top-left</option>
+                                <option value="2">Top-middle</option>
+                                <option value="3">Top-right</option>
+                                <option value="4">Middle-left</option>
+                                <option value="5">Middle-right</option>
+                                <option value="6">Down-left</option>
+                                <option value="7">Down-middle</option>
+                                <option value="8">Down-right</option>
+                            </select>
+                            <!--Shadows-->
+                            
+                            <!--Patterns-->
+                            <select autocomplete="off" class="setting" id="imagePattern" onchange="changeImagePattern()" style="display: none">
+                                <option value="0" selected>None</option>
+                                <option value="1">Straight</option>
+                                <option value="2">Diagonal</option>
+                            </select>
+                            <!--Patterns-->
+                            
+                            <!--Pattern's coordinates-->
+                            <input class="setting" type="number" id="PatternXCoord" style="width: 2em; display: none" placeholder="X" onchange="changePatternXCoord()">
+                            <input class="setting" type="number" id="PatternYCoord" style="width: 2em; display: none" placeholder="Y" onchange="changePatternYCoord()">
+                            <!--Pattern's coordinates-->
+
+                            <!--Background color-->
+                            <input class="setting" type="color" id="favcolor" name="favcolor" value="#fa0028" style="width: 10vh; height: 10vh; display: none" onchange="backgroundChange()">
+                            <!--Background color-->
+
+                            <!--Wallpaper's size-->
+                            <input class="setting" type="number" id="heightChanger" style="width: 4em; display: none" placeholder="Height" onchange="changeHeight()">
+                            <input class="setting" type="number" id="widthChanger" style="width: 4em; display: none" placeholder="Width" onchange="changeWidth()">
+                            <!--Wallpaper's size-->
+
+                            <!--Set to default-->
+                            <button class="setting" style="display: none" id="default" onclick="setResolutionToDefault()">Set to device's default</button>
+                            <!--Set to default-->
+
+                            <!--Watermark design-->
+                            <select autocomplete="off" class="setting" style="display: none" name="select" id="watermarkDesign" onchange="changeWatermarkDesign()">
+                                <option value="0" selected>None</option>
+                                <option value="1">Original</option>
+                                <option value="2">Square</option>
+                                <option value="3">Short</option>
+                                <option value="4">Long</option>
+                                <option value="5">Big</option>
+                                <option value="6">Heart</option>
+                            </select>
+                            <!--Watermark design-->
+
+                            <!--Watermark position-->
+                            <select autocomplete="off" class="setting" style="display: none" name="select" id="watermarkPosition" onchange="changeWatermarkPosition()">
+                                <option value="0" selected>None</option>
+                                <option value="1">Top-left</option>
+                                <option value="2">Top-middle</option>
+                                <option value="3">Top-right</option>
+                                <option value="4">Middle-left</option>
+                                <option value="5">Center</option>
+                                <option value="6">Middle-right</option>
+                                <option value="7">Down-left</option>
+                                <option value="8">Down-middle</option>
+                                <option value="9">Down-right</option>
+                            </select>
+                            <!--Watermark position-->
+
+                        </div>
+                        <!--Settings' section-->
+
+                        <canvas id="realCanvas" style="display: none"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <!--Buttons' section-->
+            <div class="text-center" style="margin-top: -10px; overlay: -2">
+
+                <!--Top bar-->
+                <div class="row d-flex justify-content-center" style="margin: 0px">
+                    <div class="col d-flex justify-content-center align-items-center">
+
+                        <!--Sprite settings' buttons-->
+                        <div id="sprite" style="background: #fa0028; border-radius: 10px; display: none">
+                            <button class="buttonbuttonicon" onclick="spriteSizer()">
+                                <img src="assets/img/icons/size.svg" class="buttonicon">
+                            </button>
+
+                            <button class="buttonbuttonicon" onclick="spritePosition()">
+                                <img src="assets/img/icons/position.svg" class="buttonicon">
+                            </button>
+
+                            <button class="buttonbuttonicon" onclick="spriteShadowFunction()">
+                                <img src="assets/img/icons/shadow.svg" class="buttonicon">
+                            </button>
+
+                            <button class="buttonbuttonicon" onclick="spritePattern()">
+                                <img src="assets/img/icons/pattern.svg" class="buttonicon">
+                            </button>
+                        </div>
+                        <!--Sprite settings' buttons-->
+
+                        <!--Wallpaper settings' buttons-->
+                        <div id="wallpaper" style="background: #fa0028;border-radius: 10px; display: none">
+                            <button class="buttonbuttonicon" onclick="favcolor()">
+                                <img src="assets/img/icons/backgroundcolor.svg" class="buttonicon">
+                            </button>
+
+                            <button class="buttonbuttonicon" onclick="resolution()">
+                                <img src="assets/img/icons/resolution.svg" class="buttonicon">
+                            </button>
+                        </div>
+                        <!--Wallpaper settings' buttons-->
+
+                        <!--Watermark settings' buttons-->
+                        <div id="watermark" style="background: #fa0028;border-radius: 10px; display: none">
+                            <button class="buttonbuttonicon" onclick="watermarkDesign()">
+                                <img src="assets/img/icons/watermarkdesign.svg" class="buttonicon">
+                            </button>
+
+                            <button class="buttonbuttonicon" onclick="watermarkPosition()">
+                                <img src="assets/img/icons/position.svg" class="buttonicon">
+                            </button>
+                        </div>
+                        <!--Watermark settings' buttons-->
+                        
+                        <div id="global" style="background: #fa0028;border-radius: 10px; display: block">
+                            <button class="buttonbuttonicon" onclick="sprite()">
+                                <img src="assets/img/icons/sprite.svg" class="buttonicon">
+                            </button>
+
+                            <button class="buttonbuttonicon" onclick="wallpaper()">
+                                <img src="assets/img/icons/wallpaper.svg" class="buttonicon">
+                            </button>
+
+                            <button class="buttonbuttonicon" onclick="watermark()">
+                                <img src="assets/img/icons/watermark.svg" class="buttonicon">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!--Top bar-->
+
+                <!--Bottom bar-->
+                <div class="row d-flex justify-content-center" style="margin: 0px">
+                    <div class="col d-flex justify-content-center align-items-center">
+                        <div id="global" style="background: #fa0028; margin: 10px; border-radius: 10px; display: block">
+                            
+                            <!--Return buttons-->
+                            <button class="buttonbuttonicon" id="returnunable" onclick="global()" style="display: inline">
+                                <img onclick="sprite()" src="assets/img/icons/returnunable.svg" class="buttonicon">
+                            </button>
+        
+                            <button class="buttonbuttonicon" id="return" onclick="global()" style="display: none">
+                                <img onclick="sprite()"  src="assets/img/icons/return.svg" class="buttonicon">
+                            </button>
+                            <!--Return buttons-->
+        
+                            <!--Reload button-->
+                            <button class="buttonbuttonicon" onclick="changeVisibility(location.reload())">
+                                <img src="assets/img/icons/change.svg" class="buttonicon">
+                            </button>
+                            <!--Reload button-->
+
+                            <!--Download button-->
+                            <button class="buttonbuttonicon" onclick="downloadCanvas()">
+                                <img src="assets/img/icons/download.svg" class="buttonicon">
+                            </button>
+                            <!--Download button-->
+    
+                        </div>
+                    </div>
+                </div>
+                <!--Bottom bar-->
+
+            </div>
+            <!--Buttons' section-->
+
+        </div>
+        <!--Tool-->
+
+        <!--Black divider-->
+        <div class="container d-flex justify-content-center">
+            <div class="divider"></div>
+        </div>
+        <!--Black divider-->
+                
+        <!--Contact section-->
+        <div class="row justify-content-center" style="margin: 0px">
+            <div class="col-md-3 col-lg-2 d-flex justify-content-center" style="padding: 10px;min-width: 30%">
+                <div class="shadow" style="background: rgb(250,250,250); border-radius: 10px">
+                    <h1 style="font-size: 30px; padding: 10px; border-top-left-radius: 10px; border-top-right-radius: 10px; color: rgb(255,255,255); background: rgb(250,0,40); margin: 0px">Get in touch!</h1>
+                    <p style="padding: 10px; padding-top: 0px; font-size: 26px">Feel free to get in touch if you find any error or bug with the tool, want to share some ideas/feedback or just want to send any message ^^</p>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <a class="tips" href="mailto:contact@abendiix.com" style="font-size: 30px; margin: 0px; padding: 10px; color: rgb(255,255,255)" target="_blank">
+                            <span style="color: rgb(33, 37, 41)">contact@abendiix.com</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Contact section-->
+
+        <!--Scripts-->
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/bs-init.js"></script>
+        <script src="assets/js/dragImageController.js"></script>
+        <script src="assets/js/drawWallpaper.js"></script>
+        <script src="assets/js/imageAutoManage.js"></script>
+        <script src="assets/js/settingsMenu/global.js"></script>
+        <script src="assets/js/settingsMenu/sprite.js"></script>
+        <script src="assets/js/settingsMenu/wallpaper.js"></script>
+        <script src="assets/js/settingsMenu/watermark.js"></script>
+        <script src="assets/js/wallpaperFunctions.js"></script>
+        <script src="assets/js/wallpaperLoader.js"></script>
+        <script src="assets/js/wallpaperVisibility.js"></script>
+        <!--Scripts-->
+        
+    </body>
+
+</html>
