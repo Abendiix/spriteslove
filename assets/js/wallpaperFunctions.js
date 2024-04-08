@@ -1,3 +1,27 @@
+/*
+MIT License
+
+Copyright (c) 2024 Abendiix
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+*/
+
 var imageLoader = document.getElementById('imageLoader');
 imageLoader.addEventListener('change', handleImage, false);
 
@@ -41,7 +65,12 @@ function whenImageLoaded() {
     var favcolor = document.getElementById('favcolor');
     favcolor.value = RGBToHex(rgb);
         
-    spriteMultiplier.value = Math.min(window.screen.width, window.screen.height) / ((Math.max(img.width, img.height)));
+    spriteMultiplier.value = Math.trunc(Math.min(window.screen.width, window.screen.height) / ((Math.max(img.width, img.height))));
+
+    if(spriteMultiplier.value == 0)
+    {
+        spriteMultiplier.value = 1;
+    }
     
     spriteXCoord.value = ~~(canvas.width / 2 - ((img.width / 2.5) / 2));
     spriteYCoord.value = ~~(canvas.height / 2 - ((img.height / 2.5) / 2));
@@ -114,7 +143,6 @@ function changeHeight() {
     drawEverything(img, spriteMultiplier, spriteXCoord, spriteYCoord, spriteShadow, spritePatternValue, spriteOrientation, canvas, realCanvas, ctx, realCtx, wallpaperBackgroundColor, watermarkDesignValue, watermarkPositionValue, shadowX, shadowY);
 }
 
-<!--Hacer que el numero de las coordenadas se redondee y no que se quede con decimales-->
 function changeXPosition()
 {
     spriteXCoord.value = document.getElementById("XPosition").value;

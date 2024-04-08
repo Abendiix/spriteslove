@@ -1,3 +1,27 @@
+<!--
+MIT License
+
+Copyright (c) 2024 Abendiix
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+-->
+
 <!DOCTYPE html>
 <html data-bs-theme="light" id="holder" class="holder_default" lang="en">
 
@@ -22,15 +46,15 @@
                 <div class="container">
 
                     <!--Sprites Love's logo-->
-                    <a class="navbar-brand d-flex align-items-center">
-                        <img class="shadow-lg rubberBand animated" src="assets/img/logo_spriteslove.svg" style="width: 50px; border-radius: 5px">
+                    <a aria-label ="Link to Sprites Love's website (it redirects to the main page)." class="navbar-brand d-flex align-items-center">
+                        <img alt="Sprites Love's logo located at the left of the navigation bar."class="shadow-lg rubberBand animated" src="assets/img/logo_spriteslove.svg" style="width: 50px; border-radius: 5px">
                     </a>
                     <!--Sprites Love's logo-->
 
                     <!--Navbar collapse-->
                     <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-5">
                         <span class="visually-hidden">Toggle navigation</span>
-                        <img src="assets/img/icons/dropdown.svg" style="width: 30px">
+                        <img alt="White arrow that represents the navigation bar toggler." src="assets/img/icons/dropdown.svg" style="width: 30px">
                     </button>
                     <!--Navbar collapse-->
                     
@@ -42,24 +66,31 @@
 
                             <!--Home-->
                             <li class="nav-item">
-                                <a class="nav-link active" href="https://spriteslove.com/" style="color: rgb(255,255,255); font-size: 32px">Home #</a>
+                                <a aria-label = "Link to Sprites Love's main page." class="nav-link active" href="https://spriteslove.com/" style="color: rgb(255,255,255); font-size: 32px">
+                                    Home #
+                                </a>
                             </li>
                             <!--Home-->
 
                             <!--Tips-->
                             <li class="nav-item">
-                                <a class="nav-link" style="color: rgb(255,255,255); font-size: 32px" href="https://ko-fi.com/abendiix" target="_blank">Tips $</a>
+                                <a aria-label = "Link to Anbediix's Ko-fi profile." class="nav-link" href="https://ko-fi.com/abendiix" style="color: rgb(255,255,255); font-size: 32px" target="_blank">
+                                    Tips $
+                                </a>
                             </li>
                             <!--Tips-->
 
                             <!--Languages-->
                             <li class="nav-item">
                                 <div class="nav-item dropdown" style="padding: 8px; font-size: 32px">
-                                    <a class="dropdown-toggle languages" aria-expanded="false" data-bs-toggle="dropdown" href="#" style="color: rgb(255,255,255); appearance: none">Languages %</a>
+                                    <a aria-label = "Dropdown element to change languages (Only English is available at the moment)." class="dropdown-toggle languages" aria-expanded="false" data-bs-toggle="dropdown" href="#" style="color: rgb(255,255,255); appearance: none">
+                                        Languages %
+                                    </a>
+
                                     <div class="dropdown-menu text-center" style="font-size: 24px">
-                                        <a class="dropdown-item" href="">English</a>
-                                        <a class="dropdown-item" href="">Español (WIP)</a>
-                                        <a class="dropdown-item" href="">日本語 (WIP)</a>
+                                        <a aria-label = "Change website's language to English." class="dropdown-item" href="">English</a>
+                                        <a aria-label = "Change website's language to Spanish." class="dropdown-item" href="">Español (WIP)</a>
+                                        <a aria-label = "Change website's language to Japanese." class="dropdown-item" href="">日本語 (WIP)</a>
                                     </div>
                                 </div>
                             </li>
@@ -86,7 +117,7 @@
     
                 <input type="file" id="imageLoader" name="imageLoader" style="display: none" class="button"/>
                 <button value="Select Sprite" onclick="document.getElementById('imageLoader').click();" style="margin-top: 10px; margin-bottom: 10px">Select sprite</button>
-                <img src="" id="image_droped" style="display: none"/>
+                <img alt="Not a real image, it is used for the tool's workflow convenience." src="" id="image_droped" style="display: none"/>
                 <p>or<br>Drop it anywhere!</p>
             </div>
         </div>
@@ -200,19 +231,19 @@
                         <!--Sprite settings' buttons-->
                         <div id="sprite" style="background: #fa0028; border-radius: 10px; display: none">
                             <button class="buttonbuttonicon" onclick="spriteSizer()">
-                                <img src="assets/img/icons/size.svg" class="buttonicon">
+                                <img alt="Tool's icon for changing the sprite's size." src="assets/img/icons/size.svg" class="buttonicon">
                             </button>
 
                             <button class="buttonbuttonicon" onclick="spritePosition()">
-                                <img src="assets/img/icons/position.svg" class="buttonicon">
+                                <img alt="Tool's icon for changing sprite's position on the canvas." src="assets/img/icons/position.svg" class="buttonicon">
                             </button>
 
                             <button class="buttonbuttonicon" onclick="spriteShadowFunction()">
-                                <img src="assets/img/icons/shadow.svg" class="buttonicon">
+                                <img alt="Tool's icon for adding a shadow to the sprite." src="assets/img/icons/shadow.svg" class="buttonicon">
                             </button>
 
                             <button class="buttonbuttonicon" onclick="spritePattern()">
-                                <img src="assets/img/icons/pattern.svg" class="buttonicon">
+                                <img alt="Tool's icon for rendering the sprite in a pattern." src="assets/img/icons/pattern.svg" class="buttonicon">
                             </button>
                         </div>
                         <!--Sprite settings' buttons-->
@@ -220,11 +251,11 @@
                         <!--Wallpaper settings' buttons-->
                         <div id="wallpaper" style="background: #fa0028;border-radius: 10px; display: none">
                             <button class="buttonbuttonicon" onclick="favcolor()">
-                                <img src="assets/img/icons/backgroundcolor.svg" class="buttonicon">
+                                <img alt="Tool's icon for changing the background's color." src="assets/img/icons/backgroundcolor.svg" class="buttonicon">
                             </button>
 
                             <button class="buttonbuttonicon" onclick="resolution()">
-                                <img src="assets/img/icons/resolution.svg" class="buttonicon">
+                                <img alt="Tool's icon for changing the canvas' resolution." src="assets/img/icons/resolution.svg" class="buttonicon">
                             </button>
                         </div>
                         <!--Wallpaper settings' buttons-->
@@ -232,26 +263,26 @@
                         <!--Watermark settings' buttons-->
                         <div id="watermark" style="background: #fa0028;border-radius: 10px; display: none">
                             <button class="buttonbuttonicon" onclick="watermarkDesign()">
-                                <img src="assets/img/icons/watermarkdesign.svg" class="buttonicon">
+                                <img alt="Tool's icon for choosing a watermark if wanted." src="assets/img/icons/watermarkdesign.svg" class="buttonicon">
                             </button>
 
                             <button class="buttonbuttonicon" onclick="watermarkPosition()">
-                                <img src="assets/img/icons/position.svg" class="buttonicon">
+                                <img alt="Tool's icon for changing the watermark's position." src="assets/img/icons/position.svg" class="buttonicon">
                             </button>
                         </div>
                         <!--Watermark settings' buttons-->
                         
                         <div id="global" style="background: #fa0028;border-radius: 10px; display: block">
                             <button class="buttonbuttonicon" onclick="sprite()">
-                                <img src="assets/img/icons/sprite.svg" class="buttonicon">
+                                <img alt="Tool's icon for opening the sprite's settings." src="assets/img/icons/sprite.svg" class="buttonicon">
                             </button>
 
                             <button class="buttonbuttonicon" onclick="wallpaper()">
-                                <img src="assets/img/icons/wallpaper.svg" class="buttonicon">
+                                <img alt="Tool's icon for opening the wallpaper's settings." src="assets/img/icons/wallpaper.svg" class="buttonicon">
                             </button>
 
                             <button class="buttonbuttonicon" onclick="watermark()">
-                                <img src="assets/img/icons/watermark.svg" class="buttonicon">
+                                <img alt="Tool's icon for opening the watermark's settings." src="assets/img/icons/watermark.svg" class="buttonicon">
                             </button>
                         </div>
                     </div>
@@ -265,23 +296,23 @@
                             
                             <!--Return buttons-->
                             <button class="buttonbuttonicon" id="returnunable" onclick="global()" style="display: inline">
-                                <img onclick="sprite()" src="assets/img/icons/returnunable.svg" class="buttonicon">
+                                <img alt="Tool's icon for not being able to retur back to the main setting's icons and options." onclick="sprite()" src="assets/img/icons/returnunable.svg" class="buttonicon">
                             </button>
         
                             <button class="buttonbuttonicon" id="return" onclick="global()" style="display: none">
-                                <img onclick="sprite()"  src="assets/img/icons/return.svg" class="buttonicon">
+                                <img alt="Tool's icon for returning to the main setting's icons and options." onclick="sprite()"  src="assets/img/icons/return.svg" class="buttonicon">
                             </button>
                             <!--Return buttons-->
         
                             <!--Reload button-->
                             <button class="buttonbuttonicon" onclick="changeVisibility(location.reload())">
-                                <img src="assets/img/icons/change.svg" class="buttonicon">
+                                <img alt="Tool's icon for reloading the page to start over." src="assets/img/icons/change.svg" class="buttonicon">
                             </button>
                             <!--Reload button-->
 
                             <!--Download button-->
                             <button class="buttonbuttonicon" onclick="downloadCanvas()">
-                                <img src="assets/img/icons/download.svg" class="buttonicon">
+                                <img alt="Tool's icon for downloading the wallpaper." src="assets/img/icons/download.svg" class="buttonicon">
                             </button>
                             <!--Download button-->
     
@@ -303,13 +334,13 @@
         <!--Black divider-->
                 
         <!--Contact section-->
-        <div class="row justify-content-center" style="margin: 0px">
+        <div class="row justify-content-center" style="margin: 0px; margin-bottom: 5vh;">
             <div class="col-md-3 col-lg-2 d-flex justify-content-center" style="padding: 10px;min-width: 30%">
                 <div class="shadow" style="background: rgb(250,250,250); border-radius: 10px">
                     <h1 style="font-size: 30px; padding: 10px; border-top-left-radius: 10px; border-top-right-radius: 10px; color: rgb(255,255,255); background: rgb(250,0,40); margin: 0px">Get in touch!</h1>
                     <p style="padding: 10px; padding-top: 0px; font-size: 26px">Feel free to get in touch if you find any error or bug with the tool, want to share some ideas/feedback or just want to send any message ^^</p>
                     <div class="d-flex justify-content-center align-items-center">
-                        <a class="mail" href="mailto:contact@abendiix [.] com" style="font-size: 30px; margin: 0px; padding: 10px; color: rgb(33, 37, 41)" target="_blank">
+                        <a class="mail" aria-label="Link to send an email to Abendiix, where the default email app will open." href="mailto:contact@abendiix [.] com" style="font-size: 30px; margin: 0px; padding: 10px; color: rgb(33, 37, 41)" target="_blank">
                             contact@abendiix [.] com
                         </a>
                     </div>

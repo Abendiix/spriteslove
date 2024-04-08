@@ -1,3 +1,27 @@
+<!--
+MIT License
+
+Copyright (c) 2024 Abendiix
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+-->
+
 <!DOCTYPE html>
 <html data-bs-theme="light" lang="en">
 
@@ -44,15 +68,15 @@
                 <div class="container">
 
                     <!--Sprites Love's logo-->
-                    <a class="navbar-brand d-flex align-items-center">
-                        <img class="shadow-lg rubberBand animated" src="assets/img/logo_spriteslove.svg" style="width: 50px; border-radius: 5px">
+                    <a aria-label="Link to Sprites Love's website (it redirects to the main page)." class="navbar-brand d-flex align-items-center">
+                        <img alt="Sprites Love's logo located at the left of the navigation bar."class="shadow-lg rubberBand animated" src="assets/img/logo_spriteslove.svg" style="width: 50px; border-radius: 5px">
                     </a>
                     <!--Sprites Love's logo-->
 
                     <!--Navbar collapse-->
                     <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-5">
                         <span class="visually-hidden">Toggle navigation</span>
-                        <img src="assets/img/icons/dropdown.svg" style="width: 30px">
+                        <img alt="White arrow that represents the navigation bar toggler." src="assets/img/icons/dropdown.svg" style="width: 30px">
                     </button>
                     <!--Navbar collapse-->
                     
@@ -64,7 +88,7 @@
 
                             <!--Home-->
                             <li class="nav-item">
-                                <a class="nav-link active" href="https://spriteslove.com/" style="color: rgb(255,255,255); font-size: 32px">
+                                <a aria-label="Link to Sprites Love's main page." class="nav-link active" href="https://spriteslove.com/" style="color: rgb(255,255,255); font-size: 32px">
                                     Home #
                                 </a>
                             </li>
@@ -72,7 +96,7 @@
 
                             <!--Tips-->
                             <li class="nav-item">
-                                <a class="nav-link" href="https://ko-fi.com/abendiix" style="color: rgb(255,255,255); font-size: 32px" target="_blank">
+                                <a aria-label="Link to Anbediix's Ko-fi profile." class="nav-link" href="https://ko-fi.com/abendiix" style="color: rgb(255,255,255); font-size: 32px" target="_blank">
                                     Tips $
                                 </a>
                             </li>
@@ -81,14 +105,14 @@
                             <!--Languages-->
                             <li class="nav-item">
                                 <div class="nav-item dropdown" style="padding: 8px; font-size: 32px">
-                                    <a class="dropdown-toggle languages" aria-expanded="false" data-bs-toggle="dropdown" href="#" style="color: rgb(255,255,255); appearance: none">
+                                    <a aria-label="Dropdown element to change languages (Only English is available at the moment)." class="dropdown-toggle languages" aria-expanded="false" data-bs-toggle="dropdown" href="#" style="color: rgb(255,255,255); appearance: none">
                                         Languages %
                                     </a>
 
                                     <div class="dropdown-menu text-center" style="font-size: 24px">
-                                        <a class="dropdown-item" href="">English</a>
-                                        <a class="dropdown-item" href="">Español (WIP)</a>
-                                        <a class="dropdown-item" href="">日本語 (WIP)</a>
+                                        <a aria-label="Change website's language to English." class="dropdown-item" href="">English</a>
+                                        <a aria-label="Change website's language to Spanish." class="dropdown-item" href="">Español (WIP)</a>
+                                        <a aria-label="Change website's language to Japanese." class="dropdown-item" href="">日本語 (WIP)</a>
                                     </div>
                                 </div>
                             </li>
@@ -110,10 +134,10 @@
 
             <!--Wallpaper tool-->
             <div data-bss-hover-animate="pulse" class="col-md-3 col-lg-2 d-flex justify-content-center" onmouseover="changeImageColorHover('wallpaper')" onmouseleave="reverseImageColorHover('wallpaper')" style="width: 240px; max-width: 50%; padding: 0px;">
-                <a href="./wallpaper.html" style="color: rgb(255,255,255); width: inherit; text-decoration: none;">
+                <a aria-label="Link to the wallpaper tool." href="./wallpaper.html" style="color: rgb(255,255,255); width: inherit; text-decoration: none;">
                     <div class="container d-flex justify-content-center" style="padding: 3px; background-color: #fa0028; border-top: solid; border-left: solid; border-right: solid; border-top-left-radius: 10px; border-top-right-radius: 10px; border-color: #141414">
                         
-                        <img id="wallpaper" src="assets/img/icons/background_icon.svg" style="width: 100%;"> 
+                        <img alt="Pixel art icon (11 by 11 pixels) that represents a landscape with its sun at the top right corner." id="wallpaper" src="assets/img/icons/background_icon.svg" style="width: 100%;"> 
                         
                         <h2 style="margin: 5px">
                             Wallpaper
@@ -147,8 +171,8 @@
                     <!--Title-->
                     <h1 style="padding: 10px; font-size: 30px; background: #fa0028; border-top-left-radius: 10px; border-top-right-radius: 10px; margin: 0px; margin-bottom: 0px; color: rgb(255,255,255)">
                         $
-                        <a href="https://ko-fi.com/abendiix" style="font-size: 30px; margin: 0px; padding: 10px; color: rgb(255,255,255)" target="_blank">
-                            Tips (via Ko-Fi)
+                        <a aria-label="Link to Anbediix's Ko-fi profile." href="https://ko-fi.com/abendiix" style="font-size: 30px; margin: 0px; padding: 10px; color: rgb(255,255,255)" target="_blank">
+                            Tips (via Ko-fi)
                         </a>
                     </h1>
                     <!--Title-->
@@ -174,7 +198,7 @@
                     <!--Title-->
                     <h1 style="font-size: 30px; padding: 10px; border-top-left-radius: 10px; border-top-right-radius: 10px; color: rgb(255,255,255); background: rgb(250,0,40); margin: 0px">
                         @
-                        <a href="mailto:contact@abendiix [.] com" style="font-size: 30px; margin: 0px; padding: 10px; color: rgb(255,255,255)" target="_blank">
+                        <a aria-label="Link to send an email to Abendiix, where the default email app will open." href="mailto:contact@abendiix [.] com" style="font-size: 30px; margin: 0px; padding: 10px; color: rgb(255,255,255)" target="_blank">
                             Contact (via email)
                         </a>
                     </h1>
@@ -197,13 +221,45 @@
         </div>
         <!--Text blocks-->
 
+        <!--Possible upcoming features blocks-->
+        <div class="row justify-content-center" style="margin: 0px">
+
+            <!--Features' block-->
+            <div class="col-md-3 col-lg-2 d-flex" style="padding: 10px; min-width: 60%">
+                <div class="shadow" style="border-radius: 10px; background: rgb(250,250,250)">
+                    
+                    <!--Title-->
+                    <h1 style="padding: 10px; font-size: 30px; background: #fa0028; border-top-left-radius: 10px; border-top-right-radius: 10px; margin: 0px; margin-bottom: 0px; color: rgb(255,255,255)">
+                        Possible upcoming features
+                    </h1>
+                    <!--Title-->
+
+                    <!--Text-->
+                    <div>
+                        <p style="padding: 10px; padding-top: 0px; font-size: 26px">
+                            + Freely adjust the separation between sprites when using horizontal or diagonal patterns.
+                            <br>
+                            + Profile picture tool.
+                            <br>
+                            + Pixel removal and cutter to get clean sprites from spritesheets so they can be properly used for the other tools.
+                        </p>
+                    </div>
+                    <!--Text-->
+
+                </div>
+            </div>
+            <!--Features' block-->
+
+        </div>
+        <!--Possible upcoming features blocks-->
+
         <!--"Made by" section-->
-        <div class="row justify-content-center" style="margin: 0px; margin-bottom: 5vh">
+        <div class="row justify-content-center" style="margin: 0px;">
             <div class="col-md-3 col-lg-2 d-flex justify-content-center align-items-center" style="min-width: 30%; padding-bottom: 20px">
                 <div>
                     <h1 class="text-center" style="font-size: 24px">Made by</h1>
                     <div class="d-flex justify-content-center" data-bss-hover-animate="tada">
-                        <a href="https://abendiix.com">
+                        <a aria-label="Link to Abendiix's website" href="https://abendiix.com">
                             <img src="assets/img/logo_abendiix.svg" style="min-width: 60px; max-width: 10vh"/>
                         </a>
                     </div>
@@ -211,6 +267,12 @@
             </div>
         </div>
         <!--"Made by" section-->
+
+        <!--Copyright notice-->
+        <div class="text-center" style="font-size: max(1vw, 2vh); margin-bottom: 5vh;">
+            © 2022-2024 Abendiix - <a aria-label="Link to Creative Commons page about CC0." href="https://creativecommons.org/publicdomain/zero/1.0/" id="cc0" class="changeableColor">CC0 1.0</a>
+        </div>
+        <!--Copyright notice-->
 
         <!--Scripts-->
         <script src="assets/bootstrap/js/bootstrap.min.js"></script>
