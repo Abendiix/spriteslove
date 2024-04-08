@@ -5,6 +5,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
         <title>Sprites Love</title>
+        <meta name="description" content="Sprites Love is an static website where anyone can enjoy and share there love with their favourite sprites.">
+        <link rel="icon" type="image/svg+xml" sizes="150x150" href="assets/img/favicon.svg">
         <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/css/spriteslovefont.css">
         <link rel="stylesheet" href="assets/css/animate.min.css">
@@ -62,24 +64,31 @@
 
                             <!--Home-->
                             <li class="nav-item">
-                                <a class="nav-link active" href="https://spriteslove.com/" style="color: rgb(255,255,255); font-size: 32px">Home #</a>
+                                <a class="nav-link active" href="https://spriteslove.com/" style="color: rgb(255,255,255); font-size: 32px">
+                                    Home #
+                                </a>
                             </li>
                             <!--Home-->
 
                             <!--Tips-->
                             <li class="nav-item">
-                                <a class="nav-link" style="color: rgb(255,255,255); font-size: 32px" href="https://ko-fi.com/abendiix" target="_blank">Tips $</a>
+                                <a class="nav-link" href="https://ko-fi.com/abendiix" style="color: rgb(255,255,255); font-size: 32px" target="_blank">
+                                    Tips $
+                                </a>
                             </li>
                             <!--Tips-->
 
                             <!--Languages-->
                             <li class="nav-item">
                                 <div class="nav-item dropdown" style="padding: 8px; font-size: 32px">
-                                    <a class="dropdown-toggle languages" aria-expanded="false" data-bs-toggle="dropdown" href="#" style="color: rgb(255,255,255); appearance: none">Languages %</a>
+                                    <a class="dropdown-toggle languages" aria-expanded="false" data-bs-toggle="dropdown" href="#" style="color: rgb(255,255,255); appearance: none">
+                                        Languages %
+                                    </a>
+
                                     <div class="dropdown-menu text-center" style="font-size: 24px">
-                                        <a class="dropdown-item" href="#">English</a>
-                                        <a class="dropdown-item" href="#">Español</a>
-                                        <a class="dropdown-item" href="#">日本語</a>
+                                        <a class="dropdown-item" href="">English</a>
+                                        <a class="dropdown-item" href="">Español (WIP)</a>
+                                        <a class="dropdown-item" href="">日本語 (WIP)</a>
                                     </div>
                                 </div>
                             </li>
@@ -100,12 +109,20 @@
         <div class="row justify-content-center" style="margin: 0px; margin-top: 10px">
 
             <!--Wallpaper tool-->
-            <div class="col-md-3 col-lg-2 d-flex justify-content-center" data-bss-hover-animate="pulse" style="width: 240px; max-width: 50%; padding: 10px">
-                <a href="./wallpaper.html" style="color: rgb(255,255,255); width: inherit;">
-                    <div class="container d-flex justify-content-center" style="background-color: #fa0028; border-top: solid; border-left: solid; border-right: solid; border-top-left-radius: 10px; border-top-right-radius: 10px; border-color: #141414">
-                        <h2 style="margin: 5px">Wallpapers</h2>
+            <div data-bss-hover-animate="pulse" class="col-md-3 col-lg-2 d-flex justify-content-center" onmouseover="changeImageColorHover('wallpaper')" onmouseleave="reverseImageColorHover('wallpaper')" style="width: 240px; max-width: 50%; padding: 0px;">
+                <a href="./wallpaper.html" style="color: rgb(255,255,255); width: inherit; text-decoration: none;">
+                    <div class="container d-flex justify-content-center" style="padding: 3px; background-color: #fa0028; border-top: solid; border-left: solid; border-right: solid; border-top-left-radius: 10px; border-top-right-radius: 10px; border-color: #141414">
+                        
+                        <img id="wallpaper" src="assets/img/icons/background_icon.svg" style="width: 100%;"> 
+                        
+                        <h2 style="margin: 5px">
+                            Wallpaper
+                        </h2>
                     </div>
-                    <img class="shadow" src="assets/img/logo_spriteslove.svg" style="border-right-style: solid; border-left-style: solid; border-bottom-style: solid; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; border-color: #141414; width: inherit">
+
+                    <p style="padding: 10px; padding-top: 0px; font-size: 20px; color: rgb(33, 37, 41); border-left: solid; border-bottom: solid; border-right: solid; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; border-color: #141414">
+                        Create wallpapers using your favorite sprites and edit them to your liking.
+                    </p>
                 </a>
             </div>
             <!--Wallpaper tool-->
@@ -115,7 +132,8 @@
         
         <!--Black divider-->
         <div class="container d-flex justify-content-center">
-            <div class="divider"></div>
+            <div class="divider">
+            </div>
         </div>
         <!--Black divider-->
 
@@ -127,9 +145,10 @@
                 <div class="shadow" style="border-radius: 10px; background: rgb(250,250,250)">
                     
                     <!--Title-->
-                    <h1 style="padding: 10px; font-size: 30px; background: #fa0028; border-top-left-radius: 10px; border-top-right-radius: 10px; margin: 0px; margin-bottom: 0px; color: rgb(255,255,255)">$
-                        <a class="tips" href="https://ko-fi.com/abendiix" style="font-size: 30px; margin: 0px; padding: 10px; color: rgb(255,255,255)" target="_blank">
-                            <span style="color: rgb(255, 255, 255)">Tips (via Ko-Fi)</span>
+                    <h1 style="padding: 10px; font-size: 30px; background: #fa0028; border-top-left-radius: 10px; border-top-right-radius: 10px; margin: 0px; margin-bottom: 0px; color: rgb(255,255,255)">
+                        $
+                        <a href="https://ko-fi.com/abendiix" style="font-size: 30px; margin: 0px; padding: 10px; color: rgb(255,255,255)" target="_blank">
+                            Tips (via Ko-Fi)
                         </a>
                     </h1>
                     <!--Title-->
@@ -139,7 +158,7 @@
                         <p style="padding: 10px; padding-top: 0px; font-size: 26px">
                             If you find this website helpful in any way or you enjoyed using it, feel free to tip me!
                             <br><br>
-                            (Only do it if you want to and can do it. Just knowing someone uses the website is more than enough to bring me joy and make me proud and happy).
+                            (Only do it if you want to and can afford it. Just knowing someone uses the website is more than enough to bring me joy and make me proud and happy).
                         </p>
                     </div>
                     <!--Text-->
@@ -154,7 +173,10 @@
                     
                     <!--Title-->
                     <h1 style="font-size: 30px; padding: 10px; border-top-left-radius: 10px; border-top-right-radius: 10px; color: rgb(255,255,255); background: rgb(250,0,40); margin: 0px">
-                        @ Contact (via email)
+                        @
+                        <a href="mailto:contact@abendiix [.] com" style="font-size: 30px; margin: 0px; padding: 10px; color: rgb(255,255,255)" target="_blank">
+                            Contact (via email)
+                        </a>
                     </h1>
                     <!--Title-->
 
@@ -163,7 +185,7 @@
                         <p style="padding: 10px; padding-top: 0px; font-size: 26px">
                             In case you find any problem with any of the tools or the website, let me know!
                             <br><br>
-                            I'm more than grateful for any new tool ideas or aditions to the ones that already exist and you are obviously welcomed to message me any of them :D
+                            I'm more than grateful for any new tool ideas or additions to the ones that already exist and you are obviously more than welcomed to message me about any of them :D
                         </p>
                     </div>
                     <!--Text-->
@@ -193,16 +215,7 @@
         <!--Scripts-->
         <script src="assets/bootstrap/js/bootstrap.min.js"></script>
         <script src="assets/js/bs-init.js"></script>
-        <script src="assets/js/dragImageController.js"></script>
-        <script src="assets/js/drawWallpaper.js"></script>
-        <script src="assets/js/imageAutoManage.js"></script>
-        <script src="assets/js/settingsMenu/global.js"></script>
-        <script src="assets/js/settingsMenu/sprite.js"></script>
-        <script src="assets/js/settingsMenu/wallpaper.js"></script>
-        <script src="assets/js/settingsMenu/watermark.js"></script>
-        <script src="assets/js/wallpaperFunctions.js"></script>
-        <script src="assets/js/wallpaperLoader.js"></script>
-        <script src="assets/js/wallpaperVisibility.js"></script>
+        <script src="assets/js/changeImageColorHover.js"></script>
         <!--Scripts-->
 
     </body>

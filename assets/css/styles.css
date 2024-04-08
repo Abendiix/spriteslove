@@ -1,3 +1,11 @@
+#returnunable {
+  cursor: not-allowed;
+}
+
+#imageCanvas {
+  touch-action: none;
+}
+
 .divider
 {
   height: 10px;
@@ -6,10 +14,6 @@
   border-radius: 10px;
   max-width: 60%;
   min-width: 60%
-}
-
-#returnunable {
-  cursor: not-allowed;
 }
 
 .buttonbuttonicon {
@@ -30,20 +34,10 @@
   margin-bottom: 12px;
 }
 
-.tips {
-  color: var(--bs-nav-link-color);
-  text-decoration: none;
-  border: none;
-}
-
 .languages {
   color: var(--bs-nav-link-color);
   text-decoration: none;
   border: none;
-}
-
-a:hover {
-  color: black !important;
 }
 
 .dropdown-toggle::after {
@@ -69,6 +63,20 @@ a:hover {
   transition: var(--bs-navbar-toggler-transition);
 }
 
+.post-image {
+  display: none;
+}
+
+a {
+  color: var(--bs-nav-link-color);
+  text-decoration: none;
+  border: none;
+}
+
+a:hover {
+  color: black !important;
+}
+
 a:focus {
   outline: 0 !important;
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
@@ -76,10 +84,6 @@ a:focus {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-
-.post-image {
-  display: none;
 }
 
 p {
@@ -99,6 +103,11 @@ button {
 
 h1 {
   margin: 8px;
+}
+
+h1 :hover
+{
+  color: black;
 }
 
 h1, h3, button, a, p {
@@ -121,11 +130,11 @@ input {
   cursor: url("../../assets/img/cursor/cursor_text.svg"), text !important;
 }
 
-#imageCanvas {
-  touch-action: none;
-}
-
 html {
   cursor: url('../../assets/img/cursor/cursor_base.svg'), auto;
 }
 
+.mail:hover
+{
+  color: rgb(128, 128, 128) !important;
+}
